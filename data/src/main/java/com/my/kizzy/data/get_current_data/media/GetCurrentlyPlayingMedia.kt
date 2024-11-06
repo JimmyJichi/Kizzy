@@ -84,7 +84,7 @@ class GetCurrentPlayingMedia @Inject constructor(
                     start = System.currentTimeMillis() - (mediaController.playbackState?.position ?: 0L)
                 )
             }
-            if (title != null) {
+            if (title != null && appName = "Apple Music") {
                 largeIcon =
                     if (Prefs[Prefs.MEDIA_RPC_APP_ICON, false]) RpcImage.ApplicationIcon(
                         mediaController.packageName, context
